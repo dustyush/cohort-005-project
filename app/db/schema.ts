@@ -229,6 +229,8 @@ export const purchases = sqliteTable(
   (table) => [index("purchases_course_idx").on(table.courseId)]
 );
 
+// Each row is a Refund Request (see GLOSSARY.md). The table keeps its older
+// name to avoid a migration.
 export const refunds = sqliteTable(
   "refunds",
   {
